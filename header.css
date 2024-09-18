@@ -1,0 +1,188 @@
+.header-parent {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 100px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box; 
+}
+
+.logo {
+    filter: var(--filter-effect);
+    width: 85px;
+    margin-left: -20px;
+    margin-top: 4px;
+    margin-right: -5px;
+}
+
+.title {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-right: -10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.currencySelect {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    padding-bottom: 1px;
+}
+.currencySelect:hover {
+    background-color: var(--border-color);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.roundedStar {
+    filter: brightness(0) saturate(100%) invert(43%) sepia(12%) saturate(684%) hue-rotate(187deg) brightness(91%) contrast(86%);
+    margin-right: 5px;   
+}
+
+.watchlist {
+    cursor: pointer;
+    font-size: 17px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 500;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+    margin-left: -15px;
+    margin-right: -15px;
+    align-items: center;
+    display: flex;
+}
+.watchlist:hover {
+    background-color: var(--border-color);
+    border-radius: 4px;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-right: 5px;
+}
+
+
+.watchlistContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.watchlistBox {
+  position: absolute;
+  right: -95px;
+  width: 350px;
+  top: 26px;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+  max-height: 300px;
+  overflow: auto;
+}
+
+
+.watchlistContainer.show .watchlistBox {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.watchlist-item {
+  cursor: default;
+  background-color: #2a2e3c;
+  display: grid;
+  grid-template-columns: auto auto 1fr auto auto;
+  align-items: center;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.watchlist-item:hover {
+  background-color: #313544;
+}
+
+.watchlist-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.watchlist-item .symbol {
+  font-size: 17px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.watchlist-item .price {
+  font-size: 17px;
+  color: white;
+  font-weight: 500;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  position: absolute;
+  margin-left: 130px; 
+}
+
+.watchlist-item .crypto-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.watchlist-item .positive {
+  color: #4caf50;
+}
+
+.watchlist-item .negative {
+  color: #f44336;
+}
+
+.watchlist-item .percentage {
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 500;
+}
+
+/* New class to align price and percentage properly */
+.align-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+
+
+
+.icon-container {
+    width: 33px; 
+    height: 33px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.sunIcon, .moonIcon {
+    max-width: 100%; 
+    max-height: 100%; 
+    cursor: pointer;
+    filter: var(--filter-effect);
+}
+
+.moonIcon {
+    transform: rotate(11deg);
+}
+
