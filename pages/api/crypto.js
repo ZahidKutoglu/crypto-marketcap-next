@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = "f020e8f7-29bd-4f34-8979-0b67720bad8f";
+const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
 const BASE_URL = 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest';
 
 export default async function handler(req, res) {
